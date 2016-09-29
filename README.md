@@ -3,14 +3,16 @@ Steps to run project
 
 Clone repo locally
 
+open terminal
+
 cd into folder
 
-npm install
+run "npm install"
 
-bower install
+run "bower install"
 
-run mongo
+run mongo(from the installation directory on Mongo)
 
-npm start
+run "npm start"
 
 navigate to http://localhost:3000 in browser
