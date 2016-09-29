@@ -46,7 +46,23 @@
 
  function httpService($http){
  	var serviceFactory = {};
+ 	var last = {
+                bottom: false,
+                top: true,
+                left: false,
+                right: true
+            };
 
+        function sanitizePosition() {
+            var current = serviceFactory.toastPosition;
+
+            if ( current.bottom && last.top ) current.top = false;
+            if ( current.top && last.bottom ) current.bottom = false;
+            if ( current.right && last.left ) current.left = false;
+            if ( current.left && last.right ) current.right = false;
+
+            last = angular.extend({},current);
+        }
  	var _postFile = function(item){
     		var url = 'file';
             console.log(url);

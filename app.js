@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } }; 
 
-mongoose.connect('mongodb://127.0.0.1/mydb', options);
-var db = mongoose.connection;
+// mongoose.connect('mongodb://127.0.0.1/mydb', options);
+// var db = mongoose.connection;
 
 app.use('/', routes);
 
