@@ -1,0 +1,53 @@
+doctype html
+html(ng-app='myApp')
+  head
+    meta(charset='utf-8')
+    title Dataxylo Exercise
+    link(rel='stylesheet', href='../stylesheets/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-animate.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-aria.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-messages.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.js')
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+  body(ng-controller='mainController as vm')
+    div(ng-cloak='')
+      md-content.md-padding
+        md-tabs(md-dynamic-height='', md-border-bottom='', flex-sm='100')
+          md-tab(label='File form')
+            md-content.md-padding
+              h1.md-display-2 File
+              form(name='fileForm', ng-submit='vm.fileForm.submit(fileForm)', novalidate='')
+                md-input-container.md-block(flex-gt-xs='50')
+                  label Enter text
+                  input(ng-model='vm.fileForm.text', type='text', name='text', required='')
+                  div(ng-messages='fileForm.text.$error')
+                    div(ng-message='required') *Required!
+                .md-input-container.md-block(flex-gt-xs='50')
+                  input#fileUpload.hide(type='file', file-model='vm.fileForm.file')
+                  md-button.md-raised.file-upload(upload-file='', upload-button='fileUpload') Select File
+                  | 			{{vm.fileForm.file.name}}
+                  span.validation-error(ng-if='vm.fileForm.file.required') *Required
+                .md-input-container.md-block(flex-gt-xs='50')
+                  md-button.md-raised(type='submit') Submit
+          md-tab(label='Image form')
+            md-content.md-padding
+              h1.md-display-2 Image
+              form(name='imageForm', ng-submit='vm.imageForm.submit(imageForm)', novalidate='')
+                md-input-container.md-block(flex-gt-xs='50')
+                  label Enter text
+                  input(ng-model='vm.imageForm.text', type='text', name='text', required='')
+                  div(ng-messages='imageForm.text.$error')
+                    div(ng-message='required') *Required!
+                .md-input-container.md-block(flex-gt-xs='50')
+                  input#imageUpload.hide(type='file', file-model='vm.imageForm.file')
+                  md-button.md-raised.file-upload(upload-file='', upload-button='imageUpload') Select File
+                  | 			{{vm.imageForm.file.name}}
+                  span.validation-error(ng-if='vm.imageForm.file.required') *Required
+                md-card(flex-gt-xs='50')
+                  img(ng-src='{{vm.imageForm.file.file}}')
+                .md-input-container.md-block(flex-gt-xs='50')
+                  md-button.md-raised(type='submit') Submit
+    script(src='../javascripts/index.js')
+

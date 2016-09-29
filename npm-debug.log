@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Niraj\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.8.7
+3 info using node@v4.4.3
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle dataxylo@0.0.0~prestart: dataxylo@0.0.0
+6 silly lifecycle dataxylo@0.0.0~prestart: no script for prestart, continuing
+7 info lifecycle dataxylo@0.0.0~start: dataxylo@0.0.0
+8 verbose lifecycle dataxylo@0.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle dataxylo@0.0.0~start: PATH: C:\Users\Niraj\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\Niraj\dataxylo\node_modules\.bin;C:\Program Files\nodejs;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\ImageMagick-7.0.2-Q16;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Utilities 1.4.4\;C:\Program Files (x86)\MySQL\MySQL Utilities 1.4.4\Doctrine extensions for PHP\;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\Skype\Phone\;C:\wamp\bin\php\php5.5.12;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\Program Files\Apache Software Foundation\apache-maven-3.3.9\bin;C:\Program Files (x86)\WinMerge;C:\Program Files\nodejs\;C:\Program Files (x86)\SMLNJ\bin\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Niraj\AppData\Local\scoop\shims;C:\Ruby22\bin;C:\Program Files (x86)\Java\jre7\bin;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd;C:\Python27\;C:\Python27\Scripts\;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files\apache-maven-3.3.9;C:\Users\Niraj\AppData\Roaming\npm;C:\Program Files (x86)\Nmap
+10 verbose lifecycle dataxylo@0.0.0~start: CWD: C:\Niraj\dataxylo
+11 silly lifecycle dataxylo@0.0.0~start: Args: [ '/d /s /c', 'node ./bin/www' ]
+12 silly lifecycle dataxylo@0.0.0~start: Returned: code: 1  signal: null
+13 info lifecycle dataxylo@0.0.0~start: Failed to exec start script
+14 verbose stack Error: dataxylo@0.0.0 start: `node ./bin/www`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\Niraj\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:244:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\Niraj\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:827:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid dataxylo@0.0.0
+16 verbose cwd C:\Niraj\dataxylo
+17 error Windows_NT 6.3.9600
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Niraj\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v4.4.3
+20 error npm  v3.8.7
+21 error code ELIFECYCLE
+22 error dataxylo@0.0.0 start: `node ./bin/www`
+22 error Exit status 1
+23 error Failed at the dataxylo@0.0.0 start script 'node ./bin/www'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the dataxylo package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./bin/www
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs dataxylo
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls dataxylo
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

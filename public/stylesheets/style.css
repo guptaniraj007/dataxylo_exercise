@@ -1,0 +1,41 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+html,
+button,
+input,
+select,
+textarea {  color: #222 }
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+body {  margin: 50px }
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+md-card{
+  margin: 0.5% !important;
+}
+
+md-input-container {
+    display: inline-block;
+    position: relative;
+    padding: 0px !important;
+    margin: 0px 0px !important;
+    vertical-align: middle;
+	}
+	
+.validation-error{
+	color: red;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
