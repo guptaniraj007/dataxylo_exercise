@@ -4,13 +4,13 @@ html(ng-app='myApp')
     meta(charset='utf-8')
     title Dataxylo Exercise
     link(rel='stylesheet', href='../stylesheets/style.css')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.css')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-animate.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-aria.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-messages.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.7/angular-material.min.js')
-    script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+    link(rel='stylesheet', href='../bower_components/angular-material/angular-material.min.css')
+    script(src='../bower_components/angular/angular.min.js')
+    script(src='../bower_components/angular-animate/angular-animate.min.js')
+    script(src='../bower_components/angular-aria/angular-aria.min.js')
+    script(src='../bower_components/angular-messages/angular-messages.min.js')
+    script(src='../bower_components/angular-material/angular-material.min.js')
+    script(src='../bower_components/jquery/dist/jquery.min.js')
   body(ng-controller='mainController as vm')
     div(ng-cloak='')
       md-content.md-padding
@@ -41,7 +41,7 @@ html(ng-app='myApp')
                   div(ng-messages='imageForm.text.$error')
                     div(ng-message='required') *Required!
                 .md-input-container.md-block(flex-gt-xs='50')
-                  input#imageUpload.hide(type='file', file-model='vm.imageForm.file')
+                  input#imageUpload.hide(type='file', accept='.jpg,.jpeg,.png,.bmp,.tiff', file-model='vm.imageForm.file')
                   md-button.md-raised.file-upload(upload-file='', upload-button='imageUpload') Select File
                   | 			{{vm.imageForm.file.name}}
                   span.validation-error(ng-if='vm.imageForm.file.required') *Required
@@ -49,5 +49,9 @@ html(ng-app='myApp')
                   img(ng-src='{{vm.imageForm.file.file}}')
                 .md-input-container.md-block(flex-gt-xs='50')
                   md-button.md-raised(type='submit') Submit
+          //md-tab(label='Data')
+          //md-content.md-padding
+            //h1.md-display-2 Data
+
     script(src='../javascripts/index.js')
 

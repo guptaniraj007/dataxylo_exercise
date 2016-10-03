@@ -4,7 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose    = require('mongoose');
+var mongoose = require('mongoose');
+require('./models/model');
 
 var routes = require('./routes/index');
 
@@ -23,10 +24,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
-                replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } }; 
+replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } }; 
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/data');
 
-// mongoose.connect('mongodb://127.0.0.1/mydb', options);
-// var db = mongoose.connection;
 
 app.use('/', routes);
 

@@ -1,7 +1,7 @@
-var mongoose    = require('mongoose');
 var express = require('express');
+var mongoose = require('mongoose');
+var Model = mongoose.model('Model');
 var router = express.Router();
-var model = require('../models/model');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -10,13 +10,16 @@ router.get('/', function(req, res, next) {
 
 router.post('/file', function(req, res, next){
 	var data = JSON.parse(req.body.values);
-	var newModel = new model(data);
-            //Save it into the DB.
-    newModel.save(function(err){
-        if(err) res.json({error: "Something went wrong. Please try again later."});
-        //If no errors, send it back to the client
-        res.json({success: "Record created successfully"});
-    });
+	var model = new Model(data);
+
+	model.save(function(err, post){
+		if(err){ res.json({"error":"Something went wrong, please try again later."}); }
+		res.json({"success":"Record created at " + post.createdAt});
+	});
 });
+
+router.get('/files', function(req, res, next){
+
+})
 
 module.exports = router;
